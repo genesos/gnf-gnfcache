@@ -1,0 +1,16 @@
+{
+    "name": "gnf/gnfcache",
+    "description": "A lightweight cache library",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "Gnf": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "genesos",
+            "email": "genesos@gmail.com"
+        }
+    ]
+}
