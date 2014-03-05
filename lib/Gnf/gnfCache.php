@@ -34,8 +34,8 @@ class __gnfCache
 	function getKey($method, $args)
 	{
 		$key = sha1($method . serialize($args));
-		$dir = '/mnt/tmpfs/gnfCache';
-		$file = $dir . '/' . $key;
+		$dir = sys_get_temp_dir();
+		$file = $dir . '/gnfCache.' . $key;
 		return $file;
 	}
 
