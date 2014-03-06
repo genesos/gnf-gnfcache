@@ -3,9 +3,7 @@
     "description": "A lightweight cache library",
     "license": "MIT",
     "autoload": {
-        "psr-0": {
-            "Gnf": "lib/"
-        }
+        "files": ["lib/Gnf/gnfCache.php"]
     },
     "authors": [
         {
