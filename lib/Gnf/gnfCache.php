@@ -35,8 +35,8 @@ namespace Gnf {
 		function getKey($method, $args)
 		{
 			$key = sha1($method . serialize($args));
-			$dir = sys_get_temp_dir();
-			$file = $dir . '/gnfCache.' . $key;
+			$dir = sys_get_temp_dir() . '/gnfCache';
+			$file = $dir . '/' . $key;
 			return $file;
 		}
 
@@ -76,16 +76,15 @@ namespace Gnf {
 				}
 			}
 		}
-	};
+	}
 }
 
-namespace{
+namespace {
 	/**
 	 * @param stdClass $dbObject
 	 * @param int $timeoutMinute
 	 * @return stdClass
 	 */
-
 	function gnfCache($dbObject, $timeoutMinute = 10)
 	{
 		return new Gnf\__gnfCache($dbObject, $timeoutMinute);
